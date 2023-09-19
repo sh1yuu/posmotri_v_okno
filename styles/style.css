@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -92,6 +111,9 @@ fieldset {
 }
 
 .search-form__pseudo-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   inline-size: 19px;
   block-size: 19px;
@@ -104,7 +126,6 @@ fieldset {
   inline-size: 15px;
   block-size: 15px;
   background-color: #FFF;
-  margin: 1px;
 }
 
 input[type='checkbox']:checked ~ .search-form__pseudo-checkbox::before {
@@ -112,18 +133,18 @@ input[type='checkbox']:checked ~ .search-form__pseudo-checkbox::before {
 }
 
 .search-form__textfield {
-  inline-size: 225px;
-  block-size: 27px;
+  min-width: 225px;
+  min-height: 27px;
   cursor: text;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  color: rgba(255, 255, 255, 0.70);
+  color: #FFF;
   background-color: inherit;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   border-right: none;
   border-left: none;
   appearance: none;
@@ -134,8 +155,6 @@ input[type='checkbox']:checked ~ .search-form__pseudo-checkbox::before {
 } 
 
 .content__details {
-  display: grid;
-  gap: 26px;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -148,6 +167,7 @@ input[type='checkbox']:checked ~ .search-form__pseudo-checkbox::before {
   line-height: 94%;
   text-transform: uppercase;
   cursor: default;
+  margin-bottom: 26px;
 }
 
 .content__accent {
@@ -157,8 +177,7 @@ input[type='checkbox']:checked ~ .search-form__pseudo-checkbox::before {
 .content__list {
   position: relative;
   block-size: 298px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: auto;
 }
 
 .content__list-item:not(:last-of-type) {
@@ -169,22 +188,33 @@ input[type='checkbox']:checked ~ .search-form__pseudo-checkbox::before {
   display: block;
   text-decoration: none;
   color: #FFF;
+  margin: 2px;
+  min-width: 394px;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:hover {
+  text-decoration-line: underline;
+}
+
+.content__card-link:active {
+  background: #545050;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.content__card-link_current {
+  background: #545050;
+}
 
 .content__video-card {
   display: flex;
   align-items: flex-start;
-  padding: 2px;
-}
-
-
-.content__video-card:hover {
-  text-decoration-line: underline;
-}
-
-.content__video-card:active {
-  background: #545050;
 }
 
 .content__video-card-description-container {
@@ -213,6 +243,8 @@ input[type='checkbox']:checked ~ .search-form__pseudo-checkbox::before {
 .content__video-card-thumbnail {
   inline-size: 194px;
   block-size: 103px;
+  object-fit: cover;
+  object-position: center;
 }
 
 button {
@@ -228,62 +260,32 @@ button {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border: 1px solid #FFF;
-}
-
-.more-button {
-  background-color: inherit;
-  inline-size: 399px;
+  border: 1px solid currentColor;
+  background-color: transparent;
   block-size: 34px;
 }
 
-.more-button:focus-visible {
+button:focus {
+  outline: none;
+}
+
+.more-button {
+  inline-size: 399px;
+}
+
+button:focus-visible {
   outline: 1px solid #FFF;
 }
 
-.more-button:hover {
+button:hover {
   text-decoration-line: underline;
 }
 
-.more-button:active {
+button:active {
   background: #545050;
 }
 
 .search-form__submit-button {
   inline-size: 194px;
-  block-size: 34px;
-  background-color: transparent;
   margin-top: 20px;
-}
-
-.search-form__submit-button:focus-visible {
-  outline: 1px solid #FFF;
-}
-
-.search-form__submit-button:hover {
-  text-decoration-line: underline;
-}
-
-.search-form__submit-button:active {
-  border: 1px solid #FFF;
-  background: #545050;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
 }
