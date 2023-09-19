@@ -19,6 +19,8 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -33,7 +35,6 @@ html {
   align-items: end;
   gap: 30px;
   inline-size: 1140px;
-  padding-top: 133px;
 }
 
 .search-form {
@@ -100,7 +101,6 @@ fieldset {
 .search-form__pseudo-checkbox::before {
   display: none;
   content: '';
-  position: absolute;
   inline-size: 15px;
   block-size: 15px;
   background-color: #FFF;
