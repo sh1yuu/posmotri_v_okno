@@ -161,7 +161,7 @@ input[type='checkbox']:checked ~ .search-form__pseudo-checkbox::before {
 }
 
 .title {
-  font-family: 'Oswald', arial;
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -227,7 +227,7 @@ input[type='checkbox']:checked ~ .search-form__pseudo-checkbox::before {
 }
 
 .content__video-card-title {
-  font-family: 'Oswald', arial;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -243,7 +243,6 @@ input[type='checkbox']:checked ~ .search-form__pseudo-checkbox::before {
 
 .content__video-card-thumbnail {
   inline-size: 194px;
-  block-size: 103px;
   object-fit: cover;
   object-position: center;
 }
