@@ -40,7 +40,6 @@ html {
 .page {
   display: flex;
   align-items: center;
-  justify-content: end;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -55,6 +54,7 @@ html {
   align-items: end;
   gap: 30px;
   inline-size: 1140px;
+  margin: 133px 30px;
 }
 
 .search-form {
